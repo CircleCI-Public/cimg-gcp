@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+repository=gcp
+parent=deploy
+variants=()
+namespace=cimg
