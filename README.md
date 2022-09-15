@@ -10,8 +10,6 @@
 
 [![CircleCI Build Status](https://circleci.com/gh/CircleCI-Public/cimg-gcp.svg?style=shield)](https://circleci.com/gh/CircleCI-Public/cimg-gcp) [![Software License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/CircleCI-Public/cimg-gcp/main/LICENSE) [![Docker Pulls](https://img.shields.io/docker/pulls/cimg/gcp)](https://hub.docker.com/r/cimg/gcp) [![CircleCI Community](https://img.shields.io/badge/community-CircleCI%20Discuss-343434.svg)](https://discuss.circleci.com/c/ecosystem/circleci-images) [![Repository](https://img.shields.io/badge/github-README-brightgreen)](https://github.com/CircleCI-Public/cimg-gcp)
 
-**_This image is in beta. How it works and what it contains may change in a breaking fashion until it stabilizes and goes GA_**
-
 `cimg/gcp` is a Docker image created by CircleCI with continuous delivery and deployment pipelines in mind.
 It contains the GCP CLI, related tools, and is based on the [cimg/deploy](https://github.com/CircleCI-Public/cimg-deploy) image.
 Each tag is a date-based snapshot.
