@@ -4,3 +4,4 @@ repository=gcp
 parent=deploy
 variants=()
 namespace=cimg
+arm64=1
