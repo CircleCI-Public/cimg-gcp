@@ -1,26 +1,26 @@
 version: 2.1
 
- orbs:
-   cimg: circleci/cimg@0.3.3
+orbs:
+  cimg: circleci/cimg@0.3.3
 
- workflows:
-   main-wf:
-     jobs:
-       - cimg/build-and-deploy:
-           name: "Staging"
-           docker-namespace: ccitest
-           docker-repository: gcp
-           publish-branch: test
-           filters:
-             branches:
-               ignore:
-                 - main
-           context: cimg-publishing
-       - cimg/build-and-deploy:
-           name: "Deploy"
-           docker-repository: gcp
-           filters:
-             branches:
-               only:
-                 - main
-           context: cimg-publishing 
+workflows:
+  main-wf:
+    jobs:
+      - cimg/build-and-deploy:
+          name: "Staging"
+          docker-namespace: ccitest
+          docker-repository: gcp
+          publish-branch: test
+          filters:
+            branches:
+              ignore:
+                - main
+          context: cimg-publishing
+      - cimg/build-and-deploy:
+          name: "Deploy"
+          docker-repository: gcp
+          filters:
+            branches:
+              only:
+                - main
+          context: cimg-publishing 
