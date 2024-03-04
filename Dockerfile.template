@@ -8,7 +8,7 @@ LABEL maintainer="CircleCI Execution Team <eng-execution@circleci.com>"
 
 # Install GCP related tools
 RUN echo "deb [signed-by=/etc/apt/trusted.gpg.d/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && \
-	curl -fsSLo - https://dl.k8s.io/apt/doc/apt-key.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/cloud.google.gpg && \
+	curl -fsSLo - https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/cloud.google.gpg && \
 	sudo apt-get update && sudo apt-get install --yes --no-install-recommends \
 		google-cloud-cli \
 		google-cloud-cli-app-engine-go \
