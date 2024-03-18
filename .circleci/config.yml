@@ -14,18 +14,32 @@ workflows:
     jobs:
       - check-feed:
           context:
-            - cimg-publishing
+            - cpe-image-bot-github-creds
   main-wf:
     when:
       not: << pipeline.parameters.trigger >>
     jobs:
       - build:
-          context: cimg-publishing
-
+          name: Test
+          filters:
+            branches:
+              ignore:
+                - main
+          context: cimg-docker-image-building
+      - build:
+          name: Deploy
+          filters:
+            branches:
+              only:
+                - main
+          context:
+            - cimg-docker-image-building
+            - cimg-docker-image-publishing
 jobs:
   build:
     docker:
       - image: cimg/base:current
+    resource_class: 2xlarge+
     steps:
       - checkout
       - setup_remote_docker:
@@ -54,6 +68,7 @@ jobs:
   check-feed:
     docker:
       - image: cimg/base:current
+    resource_class: small
     steps:
       - checkout
       - add_ssh_keys:
