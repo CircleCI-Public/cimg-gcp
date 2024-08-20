@@ -27,7 +27,6 @@ The CircleCI Docker Convenience Image support policy can be found on the [Circle
 - [Additional Resources](#additional-resources)
 - [License](#license)
 
-
 ## Getting Started
 
 This image can be used with the CircleCI `docker` executor.
