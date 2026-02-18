@@ -51,7 +51,7 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker:
-          version: "docker24"
+          version: "docker27"
       - run:
           name: "Build Docker Images"
           command: |
