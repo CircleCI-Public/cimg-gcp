@@ -2,4 +2,4 @@
 # Do not edit by hand; please use build scripts/templates to make changes
 set -eo pipefail
 
-docker build --file 2025.01/Dockerfile -t cimg/gcp:2025.01.1 -t cimg/gcp:2025.01 --platform linux/amd64 .
+docker build --file 2026.02/Dockerfile -t cimg/gcp:2026.02.1 -t cimg/gcp:2026.02 --platform linux/amd64 .
